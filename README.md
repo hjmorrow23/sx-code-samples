@@ -1,0 +1,1 @@
+Thanks for checking out my github. This repo is just a collection of code samples and ui screens that I worked on. You can't run anything from these sameples and all data is fake for discretion of my previous employers. Feel free to reach out to me at hjmorrow23@gmail.com if you have any questions.
