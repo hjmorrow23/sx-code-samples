@@ -1,0 +1,4 @@
+This is a file sample of the React compenents we built at StockX for the UI to handle creating discounts. You will not be able to see all components used or run this project in any capacity The photos give you an example of the UI during some of the step by step flow while the code gives you some corresponding examples of the component structure I used when building the project, some of the redux (ducks) used to handle state management of the data going to and from API calls, and some tests written to ensure the flow is working.
+
+Let me know if you have any questions about these files and I'd be happy to walk you through the information here.
+

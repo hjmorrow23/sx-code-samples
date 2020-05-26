@@ -1,0 +1,199 @@
+.rwd-table {
+  margin: 1em 0;
+  width: 100%;
+  display: table;
+  
+  thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+
+        @media (min-width: $breakpoint-alpha) {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    }
+  
+  td {
+    display: block; 
+    
+    &:last-child {
+      padding-bottom: .5em;
+    }
+
+    &:before {
+      content: attr(data-th); 
+      font-size: 12px;
+      color: rgb(148, 148, 148);
+      width: 8em;
+      display: block;
+      
+      @media (min-width: $breakpoint-alpha) {
+        display: none;
+      }
+    }
+  }
+
+  tbody {
+    border-radius: 5px; 
+
+    @media (max-width: $breakpoint-alpha) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+    }
+
+    @media (max-width: $breakpoint-beta) {
+      grid-template-columns: 1fr;
+    }
+
+    tr {
+      border-radius: 5px; 
+      cursor: pointer;
+  
+      td:first-child {
+        border-left: none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          display: inline-block;
+          right: 0;
+          top: 0;
+          border-top-right-radius: 5px;
+          border-left: 25px solid transparent;
+          border-bottom: 25px solid transparent;
+          border-top: 25px solid $sx-gray-500;
+          border-right: 25px solid $sx-gray-500;
+
+          @media (min-width: $breakpoint-alpha) {
+            display: none;
+          }
+        }
+
+        @media (min-width: $breakpoint-alpha) {
+          border-left: 4px solid $sx-gray-500;
+        }
+      }
+  
+      td:last-child {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+  }
+  
+  th, td {
+    text-align: left;
+    
+    @media (min-width: $breakpoint-alpha) {
+      display: table-cell;
+      padding: .25em .5em;
+      
+      &:first-child {
+        padding-left: 0;
+      }
+      
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+  }
+  
+  
+}
+
+.env-toggle {
+    margin-top: 30px;
+}
+
+.nav {
+  position: relative;
+}
+
+.sort-dropdown {
+  margin-top: 20px;
+  width: 100%;
+  display: block;
+
+  @media (min-width: $breakpoint-alpha) {
+    display: none;
+  }
+}
+
+.selected-row {
+  cursor: pointer;
+
+  @media (max-width: $breakpoint-alpha) {
+    box-shadow: rgba(80,158,47, .75) 0px 1px 2px 0px, rgba(80,158,47, .1) 0px 0px 2px 0px !important;
+  }
+
+  td:first-child {
+    border-left: none;
+    position: relative;
+
+    &::after {
+      content: "\2713";
+      color: #fff;
+      position: absolute;
+      display: inline-block;
+      right: 0;
+      top: 0;
+      border-top-right-radius: 5px;
+      border-top: 25px solid $sx-green-2 !important;
+      border-right: 25px solid $sx-green-2 !important;
+
+      @media (min-width: $breakpoint-alpha) {
+        display: none;
+      }
+    }
+
+    @media (min-width: $breakpoint-alpha) {
+      border-left: 4px solid $sx-green-2 !important;
+    }
+  }
+  
+}
+
+
+.table-header {
+  margin: 20px 0 70px;
+  position: relative;
+  min-height: 30px;
+  width: 100%;
+  font-size: 18px;
+
+  @media (min-width: $breakpoint-alpha) {
+    margin: 20px 0 30px;
+  }
+
+  .table-icons {
+    right: 0;
+    position: absolute;
+    width: 100%;
+    text-align: right;
+
+    @media (min-width: $breakpoint-alpha) {
+      width: 20%;
+    }
+  }
+  
+  .sort {
+    width: calc(100% - 37px);
+    display: inline-block;
+    margin-right: 30px;
+
+    @media (min-width: $breakpoint-alpha) {
+      display: none;
+    }
+  }
+    
+  svg {
+      cursor: pointer;
+  }  
+}
